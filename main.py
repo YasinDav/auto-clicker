@@ -16,11 +16,31 @@ wait("x")
 again = True
 while again:
     try:
-        num = int(input("Enter number for click : "))
+        num_click = int(input("Enter number for click : "))
         again = False
     except:
         print("only you can enter umber")
-for i in range(num):
-    X = random.randint(-20, 20)
-    Y = random.randint(-30, 30)
-    p.click(position[x]+X, position[y]+Y)
+
+again = True
+while again:
+    try:
+        num_again = int(input("Enter number for again : "))
+        again = False
+    except:
+        print("only you can enter umber")
+
+again = True
+while again:
+    try:
+        num_sleep = int(input("Enter number for sleep : "))
+        again = False
+    except:
+        print("only you can enter umber")
+
+
+for j in range(num_again):
+    for i in range(num_click):
+        X = random.randint(-20, 20)
+        Y = random.randint(-30, 30)
+        p.click(position[x]+X, position[y]+Y)
+    p.sleep(num_sleep)
